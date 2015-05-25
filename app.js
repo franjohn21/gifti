@@ -9,6 +9,7 @@ var app = express();
 var Promise = require('bluebird');
 var fs = require('fs');
 var utils = require('./utils');
+var process = require('process');
 var models = {}, controllers = {};
 Promise.promisifyAll(mongoose);
 
@@ -17,7 +18,8 @@ console.out = require('tracer').colorConsole({
     "({{file}}:{{line}}) {{message}}"
   ]
 }).info;
-mongoose.connect('mongodb://localhost:27017/gifti');
+var db = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/gifti';
+mongoose.connect(db);
 
 fs.readdirSync(__dirname + '/models').forEach(function(fileName){
 	if(~fileName.indexOf('js'))
