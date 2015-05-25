@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <h3> Your recommended gifts! </h3>
+    <% _.each(gifts, function(gift){ %>
+    <div class="col-md-4">
+      <div class="list-group">
+        <a href="<%= gift.get('url') %>" class="list-group-item">
+          <img src="<%= gift.get('imageUrl') %>" style="height: 250px; width: 100%;"></img>
+          <hr>
+          <h4 class="list-group-item-heading"> <%= gift.get('name') %></h4>
+          <p class="list-group-item-text">$<%= (gift.get('price')/100).toFixed(2) %></p>
+        </a>
+      </div>
+    </div>
+      <% }); %>
+  </div>
+</div>

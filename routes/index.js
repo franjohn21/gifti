@@ -7,6 +7,6 @@ module.exports = function(models, controllers){
     res.render('index');
   });
   router.get('/gifts', controllers.gifts.getGifts);
-  
+  router.post('/gifts', controllers.gifts.createGift);
   return router;
 }
