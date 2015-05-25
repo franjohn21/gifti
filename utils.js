@@ -3,6 +3,7 @@ module.exports = {
   capitalize: function(string){
     return string && string[0].toUpperCase() + string.slice(1);
   },
+  //Given an array and the size it will return a random sample
   getRandom: function(arr, size) {
     var copy = arr.slice(0), rand = [];
     for (var i = 0; i < size && i < copy.length; i++) {
@@ -11,6 +12,7 @@ module.exports = {
     }
     return rand;
   },
+  //Given an object this will return whether the object is empty
   isEmptyObject: function(obj) {
     return !Object.keys(obj).length;
   }

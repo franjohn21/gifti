@@ -8,9 +8,9 @@ module.exports = function(models){
   };
 
   function getGifts(req, res, next){
-    var limit;
     Gift.findAsync()
       .then(function(gifts){
+        //Simulate (for now) algorithm picking gifts by returning random gifts
         if(!utils.isEmptyObject(req.query))
           gifts = utils.getRandom(gifts, 5)
         res.json(gifts);

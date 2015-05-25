@@ -34,7 +34,6 @@ define([
           console.log(error.errorThrown);
         }
       });
-
     }
   });
 
