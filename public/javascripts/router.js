@@ -3,8 +3,8 @@ define([
 	'jquery',
 	'underscore',
 	'backbone',
-	'views/gift/GiftListView',
-	'views/gift/CreateGiftView',
+	'views/GiftListView',
+	'views/CreateGiftView',
 	'collections/GiftCollection',
 	'views/HomeView'
 	], function($, _, Backbone, GiftListView, CreateGiftView, GiftCollection, HomeView){
