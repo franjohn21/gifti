@@ -9,7 +9,6 @@ var app = express();
 var Promise = require('bluebird');
 var fs = require('fs');
 var utils = require('./utils');
-var process = require('process');
 var models = {}, controllers = {};
 Promise.promisifyAll(mongoose);
 
